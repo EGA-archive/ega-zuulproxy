@@ -16,19 +16,19 @@ import zuulserver.filters.MyZuulFilter;
 @EnableCaching
 @EnableZuulProxy
 public class ZuulServerApplication {
-	
+
     public static void main(String[] args) {
         new SpringApplicationBuilder(ZuulServerApplication.class).web(true).run(args);
     }
-    
+
     @Bean
     public MyZuulFilter myZuulFilter() {
         return new MyZuulFilter();
     }
-    
+
     @Bean
     public CacheManager cacheManager() {
         return new ConcurrentMapCacheManager("permissions");
-    }    
-    
+    }
+
 }

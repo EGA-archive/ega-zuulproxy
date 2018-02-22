@@ -16,7 +16,6 @@
 package zuulserver.config;
 
 /**
- *
  * @author asenf
  */
 public class MyServerSettings {
@@ -26,7 +25,7 @@ public class MyServerSettings {
     private final String elixirUrl;
     private final String basicUser;
     private final String basicPass;
-    
+
     public MyServerSettings(String internal,
                             String url,
                             String token,
@@ -40,27 +39,27 @@ public class MyServerSettings {
         this.basicUser = basicUser;
         this.basicPass = basicPass;
     }
-    
+
     public boolean isInternal() {
-        return this.internal.equalsIgnoreCase("true");        
+        return this.internal.equalsIgnoreCase("true");
     }
-    
+
     public String getUrl() {
         return this.url;
     }
-    
+
     public String getToken() {
         return this.token;
     }
-    
+
     public String getElixirUrl() {
         return this.elixirUrl;
     }
-    
+
     public String getBasicUser() {
         return this.basicUser;
     }
-    
+
     public String getBasicPass() {
         return this.basicPass;
     }

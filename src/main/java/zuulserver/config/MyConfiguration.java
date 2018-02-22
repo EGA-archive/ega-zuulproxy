@@ -20,17 +20,22 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- *
  * @author asenf
  */
 @Configuration
 public class MyConfiguration {
-    @Value("${ega.server.internal}") String configInternal;
-    @Value("${ega.server.url}") String configUrl;
-    @Value("${ega.server.token}") String configToken;
-    @Value("${spring.oauth2.resource.userInfoUri}") String elixirUserInfo;
-    @Value("${manual.basic.user}") String basicUser;
-    @Value("${manual.basic.password}") String basicPass;
+    @Value("${ega.server.internal}")
+    String configInternal;
+    @Value("${ega.server.url}")
+    String configUrl;
+    @Value("${ega.server.token}")
+    String configToken;
+    @Value("${spring.oauth2.resource.userInfoUri}")
+    String elixirUserInfo;
+    @Value("${manual.basic.user}")
+    String basicUser;
+    @Value("${manual.basic.password}")
+    String basicPass;
 
     @Bean
     public MyServerSettings MyServerSettings() {
