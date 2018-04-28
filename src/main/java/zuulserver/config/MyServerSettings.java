@@ -23,6 +23,9 @@ public class MyServerSettings {
     private final String url;
     private final String token;
     private final String elixirUrl;
+    private final String elixirIntrospect;
+    private final String elixirClient;
+    private final String elixirSecret;
     private final String basicUser;
     private final String basicPass;
 
@@ -30,12 +33,18 @@ public class MyServerSettings {
                             String url,
                             String token,
                             String elixirUrl,
+                            String elixirIntrospect,
+                            String elixirClient,
+                            String elixirSecret,
                             String basicUser,
                             String basicPass) {
         this.internal = internal;
         this.url = url;
         this.token = token;
         this.elixirUrl = elixirUrl;
+        this.elixirIntrospect = elixirIntrospect;
+        this.elixirClient = elixirClient;
+        this.elixirSecret = elixirSecret;
         this.basicUser = basicUser;
         this.basicPass = basicPass;
     }
@@ -54,6 +63,18 @@ public class MyServerSettings {
 
     public String getElixirUrl() {
         return this.elixirUrl;
+    }
+
+    public String getElixirIntrospect() {
+        return this.elixirIntrospect;
+    }
+
+    public String getElixirClient() {
+        return this.elixirClient;
+    }
+
+    public String getElixirSecret() {
+        return this.elixirSecret;
     }
 
     public String getBasicUser() {

@@ -32,6 +32,12 @@ public class MyConfiguration {
     String configToken;
     @Value("${spring.oauth2.resource.userInfoUri}")
     String elixirUserInfo;
+    @Value("${spring.oauth2.resource.introspectUri}")
+    String elixirIntrospect;
+    @Value("${auth.server.clientId}")
+    String elixirClient;
+    @Value("${auth.server.clientsecret}")
+    String elixirClientSecret;
     @Value("${manual.basic.user}")
     String basicUser;
     @Value("${manual.basic.password}")
@@ -39,6 +45,14 @@ public class MyConfiguration {
 
     @Bean
     public MyServerSettings MyServerSettings() {
-        return new MyServerSettings(configInternal, configUrl, configToken, elixirUserInfo, basicUser, basicPass);
+        return new MyServerSettings(configInternal, 
+                                    configUrl, 
+                                    configToken, 
+                                    elixirUserInfo, 
+                                    elixirIntrospect, 
+                                    elixirClient, 
+                                    elixirClientSecret, 
+                                    basicUser, 
+                                    basicPass);
     }
 }
