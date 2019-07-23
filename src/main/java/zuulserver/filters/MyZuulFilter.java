@@ -71,8 +71,7 @@ public class MyZuulFilter extends ZuulFilter {
     public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();
         final String requestURI = this.urlPathHelper.getPathWithinApplication(ctx.getRequest());
-        if (!(requestURI.contains("data") ||
-                requestURI.contains("central"))) {
+        if (!(requestURI.contains("data") || requestURI.contains("central")|| requestURI.contains("tickets"))) {
             throw new NullPointerException();
 
         }
