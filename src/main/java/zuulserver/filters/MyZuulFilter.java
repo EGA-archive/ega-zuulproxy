@@ -252,13 +252,7 @@ System.out.println("ERROR " + ex.toString());
 
     // Returns URL for CENTRAL (Internal Only)
     private String getInternalUrl() {
-        String[] baseApi = {"http://pg-ega-pro-06.ebi.ac.uk:9153",
-                "http://pg-ega-pro-07.ebi.ac.uk:9153",
-                "http://pg-ega-pro-08.ebi.ac.uk:9153"};
-
-        Random r = new Random();
-        int index = r.nextInt(3);
-        return baseApi[index];
+        return serverSettings.getUrl();
     }
 
     /**
