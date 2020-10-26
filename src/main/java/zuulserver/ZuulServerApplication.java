@@ -7,7 +7,6 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
-import zuulserver.filters.MyZuulFilter;
 
 /**
  * @author Spencer Gibb
@@ -18,12 +17,7 @@ import zuulserver.filters.MyZuulFilter;
 public class ZuulServerApplication {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(ZuulServerApplication.class).web(true).run(args);
-    }
-
-    @Bean
-    public MyZuulFilter myZuulFilter() {
-        return new MyZuulFilter();
+        new SpringApplicationBuilder(ZuulServerApplication.class).run(args);
     }
 
     @Bean
