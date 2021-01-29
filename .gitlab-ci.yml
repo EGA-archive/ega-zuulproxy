@@ -16,3 +16,5 @@ docker-build:
   stage: package
   script:
     - mvn clean package "-DdockerRegistry=$CI_REGISTRY_IMAGE" "-Dimage.version=$CI_COMMIT_TAG" -P production -DskipTests
+  only:
+    - tags
